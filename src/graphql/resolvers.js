@@ -14,11 +14,18 @@ const resolvers = {
                 console.log(`Proveedor con ID ${id} actualizado en la base de Update`);
 
                 // Notificar a los otros microservicios
-                const instances = [
-                    'http://localhost:5000/sync-update', // Microservicio de Crear
-                    'http://localhost:5001/sync-update',  // Microservicio de Eliminar
-                    'http://localhost:5003/sync-update'  // ✅ Microservicio de Leer
-                ];
+              //  const instances = [
+             //       'http://localhost:5000/sync-update', // Microservicio de Crear
+            //        'http://localhost:5001/sync-update',  // Microservicio de Eliminar
+           //         'http://localhost:5003/sync-update'  // ✅ Microservicio de Leer
+          //      ];
+
+          const instances = [
+            'http://provider-container:5000/sync-update', // Microservicio de Crear
+            'http://provider-delete-container:5001/sync-update', // Microservicio de Eliminar
+            'http://provider-read-container:5003/sync-update'  // Microservicio de Leer
+        ];
+        
 
                 for (const instance of instances) {
                     try {
