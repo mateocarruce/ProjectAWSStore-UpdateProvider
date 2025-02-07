@@ -7,6 +7,9 @@ const sequelize = require('./config/database');
 const resolvers = require('./graphql/resolvers');
 const router = require('./routes/providerRoutes');
 
+// ✅ Permitir HTTP en Apollo Server
+process.env.APOLLO_DISABLE_SERVE_OVER_HTTPS = 'true';
+
 // Leer el esquema GraphQL
 const typeDefs = fs.readFileSync(path.join(__dirname, 'graphql/schema.graphql'), 'utf-8');
 
