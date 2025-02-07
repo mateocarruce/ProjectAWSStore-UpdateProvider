@@ -14,10 +14,16 @@ async function updateProvider(_, { id, input }) {
 //        'http://localhost:5001/sync-update', // Microservicio de Eliminar
 //    ];
 
-const instances = [
-    'http://provider-container:5000/sync-update', // Microservicio de Crear
-    'http://provider-delete-container:5001/sync-update', // Microservicio de Eliminar
-];
+   //     const instances = [
+   //         'http://provider-container:5000/sync-update', // Microservicio de Crear
+   //         'http://provider-delete-container:5001/sync-update', // Microservicio de Eliminar
+   //     ];
+
+    const instances = [
+        'http://3.214.196.129:5000/sync-update', // Microservicio de Crear
+        'http://52.45.165.246:5001/sync-update'  // Microservicio de Eliminar
+    ];
+
 
 
     for (const instance of instances) {
