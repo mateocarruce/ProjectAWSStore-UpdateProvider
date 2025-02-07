@@ -24,7 +24,7 @@ app.use(router);
 // Iniciar ambos servidores
 sequelize.sync().then(() => {
     server.listen({ port: 4002 }).then(({ url }) => {
-        console.log(`🚀 GraphQL server hello ready at ${url}`);
+        console.log(`🚀 GraphQL server helloo ready at ${url}`);
     });
 
     app.listen(5002, () => {
